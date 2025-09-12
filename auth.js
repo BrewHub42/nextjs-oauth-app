@@ -15,8 +15,8 @@ export const authConfig = {
       // On initial sign in, persist provider tokens and role (if any)
       if (account) {
         // account fields may be snake_case (access_token) or camelCase (accessToken)
-        token.accessToken = account.access_token ?? account.accessToken;
-        token.refreshToken = account.refresh_token ?? account.refreshToken;
+        token.accessToken = account.accessToken;
+        token.refreshToken = account.refreshToken;
         token.provider = account.provider;
       }
       if (user && user.role) {
